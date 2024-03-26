@@ -1,18 +1,22 @@
 ﻿#include <iostream>
 #include <String>
 #include <vector>
-#include "../include/Polynom.h"
+
+#include "../TABLES/Polynom.h"
 using namespace std;
 
 class LinearArrayTable {
 	struct record {
 		string name;
 		Polynom pol;
+		record(string key, Polynom poly) { name = key; pol = poly; }
 	};
 	size_t size = 0;
 	vector<record> Table;
 public:
-	void add(record newrecord) {
+	size_t getsize() { return size; }
+	void add(string key, Polynom pol) {
+		record newrecord{ key,pol };
 		// Проверка на, то что записи еще нет в таблице
 		for (int i = 0;i < size;i++) {
 			if (Table[i].name == newrecord.name)
@@ -41,7 +45,7 @@ public:
 	Polynom find(string findname) {
 		for (int i = 0;i < size;i++) {
 			if (Table[i].name == findname) {
-				return Table[i].Polynom;
+				return Table[i].pol;
 			}
 		}
 		throw "Notfound";
@@ -49,8 +53,9 @@ public:
 	// Вывод таблицы на экран
 	void printTable() {
 		for (int i = 0;i < size;i++) {
-			cout << record.name;
-			record.pol.printPolynom();
+			record tmp = Table[i];
+			cout << tmp.name;
+			tmp.pol.printPolynom();	
 			cout << "\n";
 		}
 	}

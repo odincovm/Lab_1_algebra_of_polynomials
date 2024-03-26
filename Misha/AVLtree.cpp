@@ -1,5 +1,6 @@
 ﻿#include <String>
 #include <iostream>
+#include "../TABLES/Polynom.h"
 using namespace std;
 class AVLTree {
 	// Вспомогательные структуры
@@ -38,7 +39,7 @@ class AVLTree {
 		}
 		return pNode;
 	}
-	TNode* add(record newrecord, TNode* pNode) {
+	void add(record newrecord, TNode* pNode) {
 		TNode* newNode;
 		newNode->data = newrecord;
 		if (newrecord.key < pNode->data.key) {

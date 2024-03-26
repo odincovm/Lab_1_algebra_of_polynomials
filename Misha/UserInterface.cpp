@@ -1,7 +1,8 @@
 ﻿#include <stdio.h>
-#include <LinearArrayTable.cpp>
+
 #include <vector>
 #include <iostream>
+#include "LinearArrayTable.cpp"
 using namespace std;
 class Userinteface
 {
@@ -23,8 +24,6 @@ public:
 		cout << "7 - Хэш таблица с цепочками\n";
 		cin >> CodeActivTable;
 	}
-	void add() {
-		LArrTable.add()
-	}
+
 	// 
 };
