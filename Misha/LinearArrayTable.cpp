@@ -1,12 +1,14 @@
-﻿#include <vector>
+﻿#include <iostream>
 #include <String>
-#include <Polynom.h>
+#include <vector>
+#include "../include/Polynom.h"
 using namespace std;
-struct record {
-	string name;
-	Polinom pol;
-};
+
 class LinearArrayTable {
+	struct record {
+		string name;
+		Polynom pol;
+	};
 	size_t size = 0;
 	vector<record> Table;
 public:
@@ -36,12 +38,20 @@ public:
 		Table = newTable;
 	}
 	// Нахождение по ключу
-	Polinom find(string findname) {
+	Polynom find(string findname) {
 		for (int i = 0;i < size;i++) {
 			if (Table[i].name == findname) {
-				return Table[i].Polinom;
+				return Table[i].Polynom;
 			}
 		}
 		throw "Notfound";
+	}
+	// Вывод таблицы на экран
+	void printTable() {
+		for (int i = 0;i < size;i++) {
+			cout << record.name;
+			record.pol.printPolynom();
+			cout << "\n";
+		}
 	}
 };
