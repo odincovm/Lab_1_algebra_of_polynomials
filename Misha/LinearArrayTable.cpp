@@ -42,13 +42,13 @@ public:
 		Table = newTable;
 	}
 	// Нахождение по ключу
-	Polynom find(string findname) {
+	Polynom* find(string findname) {
 		for (int i = 0;i < size;i++) {
 			if (Table[i].name == findname) {
-				return Table[i].pol;
+				return &Table[i].pol;
 			}
 		}
-		throw "Notfound";
+		throw nullptr;
 	}
 	// Вывод таблицы на экран
 	void printTable() {
