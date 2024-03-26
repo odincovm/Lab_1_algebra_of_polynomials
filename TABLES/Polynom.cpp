@@ -2,6 +2,15 @@
 #include <string>
 using namespace std;
 
+Polynom::Polynom(const Polynom& pol) {
+	Polynom* p = (Polynom*)&pol;;
+	Node<Monom>* m = p->getPolyFrontNode();
+	while (m != NULL) {
+		poly.addNode(m->data);
+		m = m->pNext;
+	}
+}
+
 bool isDigit(const string str) {
 	if (str >= "0" && str <= "9") return true;
 	return false;

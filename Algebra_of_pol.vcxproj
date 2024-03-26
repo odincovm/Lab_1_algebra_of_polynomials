@@ -127,15 +127,19 @@
     <ClCompile Include="misha\LinearArrayTable.cpp" />
     <ClCompile Include="misha\SerchTree.cpp" />
     <ClCompile Include="misha\UserInterface.cpp" />
+    <ClCompile Include="Postfix\ArrayTable.cpp" />
+    <ClCompile Include="Postfix\HashTable.cpp" />
+    <ClCompile Include="Postfix\Postfix.cpp" />
     <ClCompile Include="tables\Main.cpp" />
     <ClCompile Include="tables\Polynom.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest.h" />
-    <ClInclude Include="include\Polynom.h" />
     <ClInclude Include="include\Postfix.h" />
     <ClInclude Include="include\Stack.h" />
     <ClInclude Include="include\Table.h" />
+    <ClInclude Include="Postfix\ArrayTable.h" />
+    <ClInclude Include="Postfix\HashTable.h" />
     <ClInclude Include="tables\AbstractTable.h" />
     <ClInclude Include="tables\ListTable.h" />
     <ClInclude Include="tables\menu.h" />
