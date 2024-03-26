@@ -6,7 +6,7 @@ class Polynom {
 	myList<Monom> poly;
 public:
 	Polynom() {}
-	Polynom(const Polynom& pol) {}
+	Polynom(const Polynom& pol);
 	void parseAndAddMonoms(const std::string input);
 	void printPolynom();
 	void castMonom();

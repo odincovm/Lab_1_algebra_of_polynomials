@@ -1,0 +1,15 @@
+﻿  gtest-all.cc
+c1xx : fatal  error C1083: Не удается открыть файл источник: ..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest-all.cc: No such file or directory,
+  test_main.cpp
+c1xx : fatal  error C1083: Не удается открыть файл источник: ..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_main.cpp: No such file or directory,
+  test_tLinArrTable.cpp
+c1xx : fatal  error C1083: Не удается открыть файл источник: ..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tLinArrTable.cpp: No such file or directory,
+  test_tAVLtree.cpp
+c1xx : fatal  error C1083: Не удается открыть файл источник: ..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tAVLtree.cpp: No such file or directory,
+  SerchTree.cpp
+c1xx : fatal  error C1083: Не удается открыть файл источник: misha\SerchTree.cpp: No such file or directory,
+  UserInterface.cpp
+  HashTable.cpp
+  Postfix.cpp
+  Polynom.cpp
+  Создание кода...
