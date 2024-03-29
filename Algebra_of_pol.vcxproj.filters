@@ -21,6 +21,9 @@
     <ClCompile Include="misha\LinearArrayTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="misha\Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="misha\SerchTree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,29 +36,17 @@
     <ClCompile Include="tables\Polynom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest-all.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tLinArrTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tAVLtree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Postfix\HashTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Postfix\ArrayTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Postfix\Postfix.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\Monom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\myList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Polynom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="include\Postfix.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -81,15 +72,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tables\Polynom.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Postfix\HashTable.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Postfix\ArrayTable.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

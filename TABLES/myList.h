@@ -144,8 +144,6 @@ public:
 		return *this;
 	}
 	~myList() {
-		return;
-
 		Node<T>* p;
 		while (pFirst != nullptr) {
 			p = pFirst;
