@@ -8,15 +8,18 @@ class AVLTree {
 	{
 		string key;
 		Polynom pol;
+		record(string _key, Polynom poly) { key = _key; pol = poly; }
+		record() { ; }
 	};
 	struct TNode
 	{
 		record data;
 		unsigned char height;
-		TNode* pLeft = nullptr;
-		TNode* pRight = nullptr;
+		TNode* pLeft = 0;
+		TNode* pRight = 0;
+		TNode(record dat) {data=dat; pLeft = pRight = 0; height = 1; }
 	};
-	
+	size_t size = 0;
 	TNode* root;
 	// Вспомогательные функции для дерева поиска
 	void Print(TNode* p) {
@@ -33,59 +36,76 @@ class AVLTree {
 			return nullptr;
 		if (key < pNode->data.key) {
 			pNode = FindNode(key, pNode->pLeft);
+			if (pNode == nullptr)
+				return nullptr;
 		}
-		if (key < pNode->data.key) {
+		if (key > pNode->data.key) {
 			pNode = FindNode(key, pNode->pRight);
+			if (pNode == nullptr)
+				return nullptr;
 		}
 		return pNode;
 	}
-	void add(record newrecord, TNode* pNode) {
-		TNode* newNode;
-		newNode->data = newrecord;
+	TNode* add(record newrecord, TNode* pNode) {
+		TNode* newNode = new TNode(newrecord);
+		if (pNode == nullptr) {
+			root = newNode;
+			return balance(pNode);
+		}
 		if (newrecord.key < pNode->data.key) {
 			if (pNode->pLeft == nullptr) {
 				pNode->pLeft = newNode;
-				return;
+				return balance(pNode);
 			}
 			add(newrecord, pNode->pLeft);
 		}
 		if (newrecord.key > pNode->data.key) {
 			if (pNode->pRight == nullptr) {
 				pNode->pRight = newNode;
-				return;
+				return balance(pNode);
 			}
 			add(newrecord, pNode->pRight);
 		}
-		return;
+		return pNode;
 	}
 	// Вспомогательные функции для АВЛ дерева
 	unsigned char getheight(TNode* p)
 	{
+		
 		if (p == nullptr)
 			return 0;
+
 		else
 			return p->height;
 	}
 	int bfactor(TNode* p)
-	{
+	{	
+		if (p == nullptr)
+			return 0;
+
 		return getheight(p->pRight) - getheight(p->pLeft);
 	}
 	void fixheight(TNode* p)
 	{
+		if (p == nullptr)
+			return;
+		fixheight(p->pLeft);
+		fixheight(p->pRight);
 		unsigned char hl = getheight(p->pLeft);
 		unsigned char hr = getheight(p->pRight);
 		p->height = (hl > hr ? hl : hr) + 1;
+
 	}
 		// Функции для баланисировки
 	// правый поворот вокруг p
 	TNode* rotateright(TNode* p) 
 	{
-		TNode* q = p->pLeft;
-		p->pLeft = q->pRight;
-		q->pRight = p;
-		fixheight(p);
-		fixheight(q);
-		return q;
+		TNode* tmp1 = p;
+		p = p->pLeft;
+		TNode* tmp2 = p->pRight;
+		p->pRight = tmp1;
+		p->pRight->pLeft = tmp2;
+		return p;
 	}
 	// левый поворот вокруг q
 	TNode* rotateleft(TNode* q) 
@@ -114,8 +134,42 @@ class AVLTree {
 		}
 		return p; // балансировка не нужна
 	}
+	// Для удаления
+	TNode* findmin(TNode* p) // поиск узла с минимальным ключом в дереве p 
+	{
+		if (p->pLeft)
+			findmin(p->pLeft);
+		return p;
+	}
+	TNode* removemin(TNode* p) // удаление узла с минимальным ключом из дерева p
+	{
+		if (p->pLeft == 0)
+			return p->pRight;
+		p->pLeft = removemin(p->pLeft);
+		return balance(p);
+	}
+	TNode* remove(TNode* p, string k) // удаление ключа k из дерева p
+	{
+		if (!p) return 0;
+		if (k < p->data.key)
+			p->pLeft = remove(p->pLeft, k);
+		else if (k > p->data.key)
+			p->pRight = remove(p->pRight, k);
+		else //  k == p->key 
+		{
+			TNode* q = p->pLeft;
+			TNode* r = p->pRight;
+			delete p;
+			if (!r) return q;
+			TNode* min = findmin(r);
+			min->pRight = removemin(r);
+			min->pLeft = q;
+			return balance(min);
+		}
+		return balance(p);
+	}
 public:
-
+	size_t getsize() { return size; }
 	void Print() {
 		cout << "Table\n";
 		Print(root);
@@ -126,18 +180,21 @@ public:
 			return nullptr;
 		return &pNode->data.pol;
 	}
-	void add(record newrecord) {
+	void add(string key, Polynom newpol) {
+		record newrecord(key, newpol);
 		// Проверка на наличие значения
 		if (Find(newrecord.key) == nullptr) {
 			// Поиск места, куда можно вставить элемент и его вставка
 			add(newrecord, root);
 			root = balance(root);
+			size++;
 		}
 	}
 	void deleterecord(string key) {
-		TNode* delNote = FindNode(key, root);
-		root = balance(root);
-		delNote = nullptr;
+		if (Find(key) != nullptr) {
+			remove(root, key);
+			size--;
+		}
 	}
 
 };

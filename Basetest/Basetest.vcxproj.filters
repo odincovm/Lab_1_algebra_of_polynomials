@@ -30,9 +30,15 @@
     <ClCompile Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tLinArrTable.cpp">
       <Filter>Исходные файлы\Tests</Filter>
     </ClCompile>
+    <ClCompile Include="..\TABLES\Polynom.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\TABLES\Polynom.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

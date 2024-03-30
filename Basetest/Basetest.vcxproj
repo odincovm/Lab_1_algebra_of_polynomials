@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\user\My project\Lab_1_algebra_of_polynomials\include;C:\Users\user\My project\Lab_1_algebra_of_polynomials\TABLES;C:\Users\user\My project\Lab_1_algebra_of_polynomials\Misha;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,9 +132,11 @@
     <ClCompile Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_main.cpp" />
     <ClCompile Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tAVLtree.cpp" />
     <ClCompile Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tLinArrTable.cpp" />
+    <ClCompile Include="..\TABLES\Polynom.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest.h" />
+    <ClInclude Include="..\TABLES\Polynom.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
