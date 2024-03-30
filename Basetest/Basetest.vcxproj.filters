@@ -13,33 +13,27 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Исходные файлы\Tests">
-      <UniqueIdentifier>{891dde8a-a21e-4b0c-9083-0301302e29a3}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_main.cpp">
-      <Filter>Исходные файлы\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tAVLtree.cpp">
-      <Filter>Исходные файлы\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest-all.cc">
-      <Filter>Исходные файлы\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tLinArrTable.cpp">
-      <Filter>Исходные файлы\Tests</Filter>
-    </ClCompile>
-    <ClCompile Include="..\TABLES\Polynom.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest.h">
+    <ClInclude Include="gtest\gtest.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="..\TABLES\Polynom.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gtest\gtest-all.cc">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="test\main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_LinArr.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_AVL.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

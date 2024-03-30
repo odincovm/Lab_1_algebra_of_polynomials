@@ -1,5 +1,4 @@
-C:\Users\user\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest-all.cc;C:\Users\user\My project\Lab_1_algebra_of_polynomials\Basetest\x64\Debug\gtest-all.obj
-C:\Users\user\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_main.cpp;C:\Users\user\My project\Lab_1_algebra_of_polynomials\Basetest\x64\Debug\test_main.obj
-C:\Users\user\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tAVLtree.cpp;C:\Users\user\My project\Lab_1_algebra_of_polynomials\Basetest\x64\Debug\test_tAVLtree.obj
-C:\Users\user\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tLinArrTable.cpp;C:\Users\user\My project\Lab_1_algebra_of_polynomials\Basetest\x64\Debug\test_tLinArrTable.obj
-C:\Users\user\My project\Lab_1_algebra_of_polynomials\TABLES\Polynom.cpp;C:\Users\user\My project\Lab_1_algebra_of_polynomials\Basetest\x64\Debug\Polynom.obj
+D:\Programs\Lab_1_algebra_of_polynomials\BaseTest\gtest\gtest-all.cc;D:\Programs\Lab_1_algebra_of_polynomials\BaseTest\x64\Debug\gtest-all.obj
+D:\Programs\Lab_1_algebra_of_polynomials\BaseTest\test\test_AVL.cpp;D:\Programs\Lab_1_algebra_of_polynomials\BaseTest\x64\Debug\test_AVL.obj
+D:\Programs\Lab_1_algebra_of_polynomials\BaseTest\test\main.cpp;D:\Programs\Lab_1_algebra_of_polynomials\BaseTest\x64\Debug\main.obj
+D:\Programs\Lab_1_algebra_of_polynomials\BaseTest\test\test_LinArr.cpp;D:\Programs\Lab_1_algebra_of_polynomials\BaseTest\x64\Debug\test_LinArr.obj

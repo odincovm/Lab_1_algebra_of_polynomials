@@ -1,2 +1,6 @@
-﻿  test_tAVLtree.cpp
-  Basetest.vcxproj -> C:\Users\user\My project\Lab_1_algebra_of_polynomials\x64\Debug\Basetest.exe
+﻿  gtest-all.cc
+  test_AVL.cpp
+  main.cpp
+  test_LinArr.cpp
+  Создание кода...
+  BaseTest.vcxproj -> D:\Programs\Lab_1_algebra_of_polynomials\x64\Debug\BaseTest.exe
