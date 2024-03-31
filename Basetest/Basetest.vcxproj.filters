@@ -21,6 +21,9 @@
     <ClInclude Include="..\TABLES\Polynom.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="..\Postfix\HashTable.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="gtest\gtest-all.cc">
@@ -33,6 +36,9 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="test\test_AVL.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="test_Hash.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

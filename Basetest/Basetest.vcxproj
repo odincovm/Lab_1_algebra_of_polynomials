@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\Postfix\HashTable.h" />
     <ClInclude Include="..\TABLES\Polynom.h" />
     <ClInclude Include="gtest\gtest.h" />
   </ItemGroup>
@@ -136,6 +137,7 @@
     <ClCompile Include="test\test_AVL.cpp" />
     <ClCompile Include="test\main.cpp" />
     <ClCompile Include="test\test_LinArr.cpp" />
+    <ClCompile Include="test_Hash.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
