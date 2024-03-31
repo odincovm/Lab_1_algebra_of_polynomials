@@ -119,14 +119,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest-all.cc" />
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_main.cpp" />
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tLinArrTable.cpp" />
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tAVLtree.cpp" />
     <ClCompile Include="misha\AVLtree.cpp" />
     <ClCompile Include="misha\LinearArrayTable.cpp" />
-    <ClCompile Include="misha\SerchTree.cpp" />
-    <ClCompile Include="misha\UserInterface.cpp" />
     <ClCompile Include="Postfix\ArrayTable.cpp" />
     <ClCompile Include="Postfix\HashTable.cpp" />
     <ClCompile Include="Postfix\Postfix.cpp" />

@@ -21,28 +21,10 @@
     <ClCompile Include="misha\LinearArrayTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="misha\SerchTree.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="misha\UserInterface.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="tables\Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="tables\Polynom.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\gtest\gtest-all.cc">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_main.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tLinArrTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\source\repos\odincovm\Lab_1_algebra_of_polynomials\test\test_tAVLtree.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Postfix\HashTable.cpp">
