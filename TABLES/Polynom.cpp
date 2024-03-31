@@ -2,19 +2,12 @@
 #include <string>
 using namespace std;
 
-Polynom::Polynom(const Polynom& pol) {
-	Polynom* p = (Polynom*)&pol;;
-	Node<Monom>* m = p->getPolyFrontNode();
-	while (m != NULL) {
-		poly.addNode(m->data);
-		m = m->pNext;
-	}
-}
-
 bool isDigit(const string str) {
 	if (str >= "0" && str <= "9") return true;
 	return false;
 }
+
+
 
 void Polynom::parseAndAddMonoms(const string input)
 {
@@ -145,6 +138,17 @@ void Polynom::castMonom() {
 void Polynom::addPolynom(Polynom& p) {
 	Node<Monom>* pCurrent = p.getPolyFrontNode();
 	while (pCurrent != nullptr) {
+		poly.addNode(pCurrent->data);
+		pCurrent = pCurrent->pNext;
+	}
+	castMonom();
+	poly.removeZeroCoefficient();
+}
+
+void Polynom::substractPolynom(Polynom& p) {
+	Node<Monom>* pCurrent = p.getPolyFrontNode();
+	while (pCurrent != nullptr) {
+		pCurrent->data.coef *= -1;
 		poly.addNode(pCurrent->data);
 		pCurrent = pCurrent->pNext;
 	}

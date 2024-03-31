@@ -1,5 +1,5 @@
-#include "../include/Postfix.h"
-#include "../include/Stack.h"
+#include "../Project1/Postfix.h"
+#include "../Project1/Stack.h"
 #include <stdexcept>
 
 TPostfix::TPostfix(string infx) {
@@ -107,7 +107,16 @@ void TPostfix::ToPostfix() {
 	}
 }
 
+bool isDigitPost(string lec) {
+	if (lec >= "0" && lec <= "9") return true;
+	else return false;
+}
+
 double TPostfix::Calculate(AbstractTable* polynoms, double x, double y, double z) {
+	if (polynoms == nullptr) {
+		cout << "this table is not inherited from an abstract class" << endl;
+		return 0;
+	}
 	MyStack<double> st;
 	double t;
 	Polynom p;
@@ -138,9 +147,12 @@ double TPostfix::Calculate(AbstractTable* polynoms, double x, double y, double z
 			st.Push(leftOperand / rightOperand);
 			break;
 		default:
-			p = polynoms->search(lexem);
-			t = p.calcPolynom(x, y, z);
-			st.Push(t);
+			if (isDigitPost(lexem)) st.Push(stod(lexem));
+			else {
+				p = polynoms->search(lexem);
+				t = p.calcPolynom(x, y, z);
+				st.Push(t);
+			}
 			break;
 		}
 	}

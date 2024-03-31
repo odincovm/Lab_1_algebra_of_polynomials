@@ -1,2 +1,4 @@
-﻿  LinearArrayTable.cpp
-  Algebra_of_pol.vcxproj -> C:\Users\user\My project\Lab_1_algebra_of_polynomials\x64\Debug\Algebra_of_pol.exe
+﻿  Main.cpp
+C:\Users\user\PycharmProjects\Lab_1_algebra_of_polynomials\tables\Main.cpp(7,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+MSVCRTD.lib(exe_winmain.obj) : error LNK2019: ссылка на неразрешенный внешний символ WinMain в функции "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ).
+C:\Users\user\PycharmProjects\Lab_1_algebra_of_polynomials\x64\Debug\Algebra_of_pol.exe : fatal error LNK1120: неразрешенных внешних элементов: 1

@@ -6,21 +6,21 @@
 
 class LinkedListTable : public AbstractTable {
 private:
-    struct Node {
-        string key;
-        Polynom value;
-        Node* next;
-    };
+	struct Node {
+		string key;
+		Polynom value;
+		Node* next;
+	};
 
-    Node* head;
+	Node* head;
 	size_t size;
 public:
-	LinkedListTable(){
+	LinkedListTable() {
 		size = 0;
 		head = nullptr;
 	}
 	~LinkedListTable() {}
-	void sortTable() {}
+	//void sortTable() {}
 	void insert(string key, const Polynom& value) override {
 
 		Node* newNode = new Node;
@@ -38,14 +38,13 @@ public:
 			}
 			current->next = newNode;
 		}
-
 		size++;
 	}
 
-	Polynom& search(string key) override {
+	Polynom& search(const string& key) override {
 		Node* tmp = head;
 		while (tmp != nullptr) {
-			if (tmp->key == key) 
+			if (tmp->key == key)
 				return tmp->value;
 			tmp = tmp->next;
 		}
@@ -53,30 +52,62 @@ public:
 	}
 
 	Node* ToPos(string key) {
+		if (size == 0) return nullptr;
+		Node* prev = nullptr;
 		Node* current = head;
-		for (size_t i = 0; i < size; ++i) {
-			if (current->next->key == key) return current;
+
+		for (size_t i = 0; i < size; i++) {
+			if (current->key == key) {
+				prev = current;
+				return prev;
+			}
 			current = current->next;
+			prev = current;
 		}
+		return nullptr;
 	}
 
-	void remove(std::string key) override {
-		if (size == 0) throw "list is empty";
-		Node* p = ToPos(key);
-		Node* pDel = p->next;
-		p->next = pDel->next;
-		delete pDel; 
-		size--;
+	void remove(const string key) override {
+		if (size == 0) {
+			throw exception("ListTable is empty");
+		}
+
+		if (head->key == key) {
+			Node* temp = head;
+			head = head->next;
+			delete temp;
+			size--;
+			return;
+		}
+
+		Node* prev = nullptr;
+		Node* current = head;
+
+		while (current != nullptr && current->key != key) {
+			prev = current;
+			current = current->next;
+		}
+
+		if (current == nullptr) {
+			throw exception("Key not found in the list");
+		}
+
+		if (current->key == key) {
+			prev->next = current->next;
+			delete current;
+			size--;
+		}
 	}
 
 	void printTable() override {
 		Node* current = head;
+		cout << "LIST TABLE" << endl;
 		cout << "KEY                 |           POLYNOM  " << endl;
 		while (current != nullptr) {
 			cout << "___________________________________________________" << endl;
-			cout << current->key; 
-			for(int i=0; i < 20 - current->key.size(); i++)
-				cout << " "; 
+			cout << current->key;
+			for (int i = 0; i < 20 - current->key.size(); i++)
+				cout << " ";
 			cout << "|       ";
 			current->value.printPolynom();
 			current = current->next;

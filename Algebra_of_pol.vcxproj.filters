@@ -27,13 +27,13 @@
     <ClCompile Include="tables\Polynom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Postfix\HashTable.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Postfix\ArrayTable.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Postfix\Postfix.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HashTable1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -72,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Postfix\ArrayTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\HashTable1.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

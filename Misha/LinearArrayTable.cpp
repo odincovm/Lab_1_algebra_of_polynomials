@@ -1,8 +1,8 @@
 ﻿#include <iostream>
 #include <String>
 #include <vector>
+#include "../Project1/Polynom.h"
 
-#include "../TABLES/Polynom.h"
 using namespace std;
 
 class LinearArrayTable {
@@ -52,9 +52,10 @@ public:
 	}
 	// Вывод таблицы на экран
 	void printTable() {
+		cout << "Linear Array Table" << endl;
 		for (int i = 0;i < size;i++) {
 			record tmp = Table[i];
-			cout << tmp.name;
+			cout << tmp.name << " | ";
 			tmp.pol.printPolynom();	
 			cout << "\n";
 		}

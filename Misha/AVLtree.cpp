@@ -1,6 +1,7 @@
 ﻿#include <String>
 #include <iostream>
-#include "../TABLES/Polynom.h"
+#include "../Project1/Polynom.h"
+
 using namespace std;
 class AVLTree {
 	// Вспомогательные структуры

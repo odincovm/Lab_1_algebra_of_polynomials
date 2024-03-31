@@ -1,6 +1,6 @@
 #include <string>
 #include "ArrayTable.h"
-#include "../TABLES/Polynom.h"
+#include "../Project1/Polynom.h"
 using namespace std;
 
 ArrayTable::ArrayTable() {
@@ -12,8 +12,6 @@ ArrayTable::~ArrayTable() {
 	delete[] arr;
 }
 
-//void ArrayTable::sortTable() {
-//}
 int ArrayTable::find_index(string key) {
 	for (int i = 0; i < count; ++i) {
 		if (arr[i].key == key) {
@@ -50,30 +48,42 @@ void ArrayTable::insert(string key, const Polynom& value) {
 		return;
 	}
 	t = count;
-	while ((t > 0) && (arr[t - 1].key > key)) {
+	/*while ((t > 0) && (arr[t - 1].key > key) && (t<capacity-1)) {
 		arr[t] = arr[t - 1];
-		++t;
-	}
+		t++;
+	}*/
 	arr[t].key = key;
 	arr[t].value = value;
-	++count;
+	count++;
 }
 
-Polynom& ArrayTable::search(string key) {
+Polynom& ArrayTable::search(const string& key) {
 	int t = find_index(key);
 	if (t >= 0) {
 		return arr[t].value;
 	}
 	else
-		throw "Key not found: " + key;
+		throw exception("Key not found: ");
 }
+
 void ArrayTable::remove(string key) {
+	bool found = false;
+	for (int i = 0; i < count; i++) {
+		if (arr[i].key == key) {
+			found = true;
+			for (int j = i; j < count - 1; j++) {
+				arr[j] = arr[j + 1];
+			}
+			count--; 
+			break; 
+		}
+	}
 
 }
 
 void ArrayTable::printTable() {
 	cout << "Array table output" << endl << "Name\tPolynom" << endl;
-	for (int i = 0; i < count; ++i) {
+	for (int i = 0; i < count; i++) {
 		cout << arr[i].key << "\t";
 		arr[i].value.printPolynom();
 	}

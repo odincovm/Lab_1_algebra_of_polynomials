@@ -2,6 +2,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <conio.h>
+using namespace std;
 
 #define KEY_EXIT 27
 #define KEY_ENTER 13
