@@ -1,2 +1,3 @@
-﻿  test_Polinom.cpp
-  Basetest.vcxproj -> C:\Users\Tytyf\Desktop\odincovm\Lab_1_algebra_of_polynomials\x64\Debug\Basetest.exe
+﻿  test_postfix.cpp
+D:\Programs\Lab_1_algebra_of_polynomials\TABLES\ListTable.h(61,1): warning C4715: LinkedListTable::ToPos: значение возвращается не при всех путях выполнения
+  Basetest.vcxproj -> C:\Users\Tytyf\3D Objects\Lab_1_algebra_of_polynomials\x64\Debug\Basetest.exe

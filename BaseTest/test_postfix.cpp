@@ -2,7 +2,7 @@
 #include "gtest/gtest.h"
 #include "Postfix.cpp"
 
-#include <ArrayTable.cpp>
+#include "ListTable.h"
 
 
 
@@ -22,15 +22,22 @@ TEST(TPostfix, can_get_postfix) {
 	vector <string> ans { "a","b","c","*","+"};
 	EXPECT_EQ(ans, p.GetPostfix());
 }
-/* решить проблему с переводом таблицы в абстрактную
+
 TEST(TPostfix, can_calculate) {
 	AbstractTable* table = nullptr;
-	ArrayTable arrTable;
+	LinkedListTable arrTable;
 	Polynom tpol;
 	TPostfix tpos("first+first");
 	tpol.parseAndAddMonoms("2xyz");
 	arrTable.insert("first", tpol);
-	//table = (AbstractTable*) &arrTable;
-	//EXPECT_EQ(16, tpos.Calculate(table, 2, 2, 2));
+	EXPECT_EQ(32, tpos.Calculate(&arrTable, 2, 2, 2));
 }
-*/
+TEST(TPostfix, can_calculate_with_staples) {
+	AbstractTable* table = nullptr;
+	LinkedListTable arrTable;
+	Polynom tpol;
+	TPostfix tpos("a+(a*a)");
+	tpol.parseAndAddMonoms("2xyz");
+	arrTable.insert("a", tpol);
+	EXPECT_EQ(272, tpos.Calculate(&arrTable, 2, 2, 2));
+}
