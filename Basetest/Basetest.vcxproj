@@ -138,6 +138,9 @@
     <ClCompile Include="test\main.cpp" />
     <ClCompile Include="test\test_LinArr.cpp" />
     <ClCompile Include="test_Hash.cpp" />
+    <ClCompile Include="test_list.cpp" />
+    <ClCompile Include="test_Polinom.cpp" />
+    <ClCompile Include="test_postfix.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
