@@ -137,6 +137,7 @@
     <ClCompile Include="test\test_AVL.cpp" />
     <ClCompile Include="test\main.cpp" />
     <ClCompile Include="test\test_LinArr.cpp" />
+    <ClCompile Include="test_ArrTable.cpp" />
     <ClCompile Include="test_Hash.cpp" />
     <ClCompile Include="test_list.cpp" />
     <ClCompile Include="test_Polinom.cpp" />

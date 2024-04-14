@@ -43,7 +43,9 @@ void HashTable1::insert(std::string key, const Polynom& value) {
 		x->data->chain.addNode(kvp);
 	}
 }
-
+int HashTable1::getsize() {
+	return count;
+}
 Polynom& HashTable1::search(const std::string& key) {
 	unsigned long long h = GetHash(key);
 	Node<Bucket*>* x = findInList(h);
