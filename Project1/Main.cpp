@@ -377,7 +377,7 @@ void main(void) {
 				break;
 			}
 			case Linear_table: {
-				//
+				table = &linArrTable;
 				break;
 			}
 			case Array_table: {

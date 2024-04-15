@@ -3,10 +3,10 @@
 #include <String>
 #include <vector>
 #include "../Project1/Polynom.h"
-
+#include"../Project1/AbstractTable.h"
 using namespace std;
 
-class LinearArrayTable {
+class LinearArrayTable : public AbstractTable{
 	struct record {
 		string name;
 		Polynom pol;
@@ -16,16 +16,27 @@ class LinearArrayTable {
 	vector<record> Table;
 public:
 	size_t getsize() { return size; }
-	void insert(string key, Polynom pol) {
-		record newrecord{ key,pol };
+	void insert(std::string key, const Polynom& value) override {
+		record newrecord{ key,value };
 		// Проверка на, то что записи еще нет в таблице
-		for (int i = 0;i < size;i++) {
+		for (int i = 0; i < size; i++) {
 			if (Table[i].name == newrecord.name)
 				return;
 		}
 		// добавление новой записи
 		Table.push_back(newrecord);
 		size++;
+	}
+	void remove(const std::string key)override {
+		deleteRecord(key);
+	}
+	Polynom& search(const std::string& key)override {
+		for (int i = 0; i < size; i++) {
+			if (Table[i].name == key) {
+				return Table[i].pol;
+			}
+		}
+		throw nullptr;
 	}
 	void deleteRecord (string deletename) {
 		vector<record> newTable;
@@ -52,7 +63,7 @@ public:
 		throw nullptr;
 	}
 	// Вывод таблицы на экран
-	void printTable() {
+	void printTable() override{
 		cout << "Linear Array Table" << endl;
 		for (int i = 0;i < size;i++) {
 			record tmp = Table[i];

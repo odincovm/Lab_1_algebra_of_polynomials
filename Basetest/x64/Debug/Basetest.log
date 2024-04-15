@@ -1,2 +1,16 @@
-﻿  test_LinArr.cpp
-  Basetest.vcxproj -> C:\Users\Tytyf\PycharmProjects\Lab_1_algebra_of_polynomials\x64\Debug\Basetest.exe
+﻿  gtest-all.cc
+  test_AVL.cpp
+  main.cpp
+  test_LinArr.cpp
+  test_ArrTable.cpp
+  test_Hash.cpp
+  test_list.cpp
+C:\Users\Tytyf\PycharmProjects\TelegramBot\Lab_1_algebra_of_polynomials\Project1\ListTable.h(61,25): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "test_list.cpp")
+  
+  test_Polinom.cpp
+  test_postfix.cpp
+  Создание кода...
+D:\Programs\Lab_1_algebra_of_polynomials\TABLES\ListTable.h(61,1): warning C4715: LinkedListTable::ToPos: значение возвращается не при всех путях выполнения
+  LINK : не найден или не выполнена сборка C:\Users\Tytyf\PycharmProjects\TelegramBot\Lab_1_algebra_of_polynomials\x64\Debug\Basetest.exe при последней инкрементной компоновке; выполняется полная компоновка
+  Basetest.vcxproj -> C:\Users\Tytyf\PycharmProjects\TelegramBot\Lab_1_algebra_of_polynomials\x64\Debug\Basetest.exe
