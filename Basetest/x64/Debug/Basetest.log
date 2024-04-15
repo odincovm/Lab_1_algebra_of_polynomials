@@ -1,1 +1,7 @@
-﻿  Basetest.vcxproj -> C:\Users\Tytyf\3D Objects\Lab_1_algebra_of_polynomials\x64\Debug\Basetest.exe
+﻿  test_Hash.cpp
+  test_list.cpp
+C:\Users\Tytyf\Saved Games\odincovm\Lab_1_algebra_of_polynomials\Project1\ListTable.h(52,25): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "test_list.cpp")
+  
+  Создание кода...
+  Basetest.vcxproj -> C:\Users\Tytyf\Saved Games\odincovm\Lab_1_algebra_of_polynomials\x64\Debug\Basetest.exe

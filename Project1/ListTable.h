@@ -49,7 +49,7 @@ public:
 		}
 		throw exception("NotFound");
 	}
-
+	int getsize() { return size; }
 	Node* ToPos(string key) {
 		if (size == 0) return nullptr;
 		Node* prev = nullptr;
