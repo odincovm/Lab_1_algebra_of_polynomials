@@ -201,7 +201,7 @@ void main(void) {
 				break;
 			}
 			case AVL_tree: {
-				search = *avlTree.search(key);
+				search = *avlTree.oldserch(key);
 				search.printPolynom();
 				break;
 			}
@@ -234,7 +234,7 @@ void main(void) {
 				break;
 			}
 			case AVL_tree: {
-				avlTree.Print();
+				avlTree.printTable();
 				break;
 			}
 			case Linear_table: {
@@ -270,7 +270,7 @@ void main(void) {
 				break;
 			}
 			case AVL_tree: {
-				search = *avlTree.search(key);
+				search = *avlTree.oldserch(key);
 				search.printPolynom();
 				break;
 			}
@@ -373,7 +373,7 @@ void main(void) {
 				break;
 			}
 			case AVL_tree: {
-				//
+				table = &avlTree;
 				break;
 			}
 			case Linear_table: {

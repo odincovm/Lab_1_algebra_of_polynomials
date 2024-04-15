@@ -15,7 +15,8 @@ TEST(AVLTree, can_add_root)
 	Polynom pol;
 	pol.parseAndAddMonoms("2x2y2z2");
 	tmp.insert("E", pol);
-	EXPECT_NE(nullptr, tmp.search("E"));
+	
+	EXPECT_NE(nullptr, tmp.oldsearch("E"));
 }
 TEST(AVLTree, can_add)
 {
@@ -24,7 +25,7 @@ TEST(AVLTree, can_add)
 	pol.parseAndAddMonoms("2x2y2z2");
 	tmp.insert("E", pol);
 	tmp.insert("B", pol);
-	EXPECT_NE(nullptr, tmp.search("B"));
+	EXPECT_NE(nullptr, tmp.oldsearch("E"));
 }
 TEST(AVLTree, can_add_dublicate)
 {
@@ -44,7 +45,7 @@ TEST(AVLTree, can_delete)
 	tmp.insert("E", pol);
 	tmp.insert("B", pol);
 	tmp.remove("B");
-	EXPECT_EQ(nullptr, tmp.search("B"));
+	EXPECT_EQ(nullptr, tmp.oldsearch("B"));
 }
 TEST(AVLTree, dont_delete_if_wrong_key) {
 	AVLTree tmp;

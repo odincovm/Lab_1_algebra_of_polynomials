@@ -1,9 +1,9 @@
 ﻿#include <String>
 #include <iostream>
 #include "../Project1/Polynom.h"
-
+#include "../Project1/AbstractTable.h"
 using namespace std;
-class AVLTree {
+class AVLTree :public AbstractTable{
 	// Вспомогательные структуры
 	struct record
 	{
@@ -171,28 +171,34 @@ class AVLTree {
 	}
 public:
 	size_t getsize() { return size; }
-	void Print() {
+	void printTable()override {
 		cout << "Table\n";
 		Print(root);
 	}
-	Polynom* search(string key) {
+	Polynom& search(const std::string& key) {
+		TNode* pNode = FindNode(key, root);
+		if (pNode == nullptr)
+			throw nullptr;
+		return pNode->data.pol;
+	}
+	Polynom* oldserch(string key) {
 		TNode* pNode = FindNode(key, root);
 		if (pNode == nullptr)
 			return nullptr;
 		return &pNode->data.pol;
 	}
-	void insert(string key, Polynom newpol) {
+	void insert(string key,const Polynom& newpol) override {
 		record newrecord(key, newpol);
 		// Проверка на наличие значения
-		if (search(newrecord.key) == nullptr) {
+		if (oldserch(newrecord.key) == nullptr) {
 			// Поиск места, куда можно вставить элемент и его вставка
 			insert(newrecord, root);
 			root = balance(root);
 			size++;
 		}
 	}
-	void remove(string key) {
-		if (search(key) != nullptr) {
+	void remove(const string key)override {
+		if (oldserch(key) != nullptr) {
 			remove(root, key);
 			size--;
 		}
