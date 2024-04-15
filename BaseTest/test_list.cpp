@@ -24,7 +24,15 @@ TEST(ListTable, can_delete)
 	tmp.remove("test");
 	EXPECT_EQ(0, tmp.getsize());
 }
-
+TEST(ListTable, cant_be_dublicate)
+{
+	LinkedListTable tmp;
+	Polynom pol;
+	pol.parseAndAddMonoms("2x2y2z2");
+	tmp.insert("test", pol);
+	tmp.insert("test", pol);
+	EXPECT_EQ(1, tmp.getsize());
+}
 TEST(ListTable, can_find)
 {
 	LinkedListTable tmp;

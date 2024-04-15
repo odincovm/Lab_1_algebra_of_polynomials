@@ -5,6 +5,15 @@
 
 class LinkedListTable : public AbstractTable {
 private:
+	bool check(std::string key) {
+		Node* tmp = head;
+		while (tmp != nullptr) {
+			if (tmp->key == key)
+				return true;
+			tmp = tmp->next;
+		}
+		return false;
+	}
 	struct Node {
 		string key;
 		Polynom value;
@@ -21,23 +30,23 @@ public:
 	~LinkedListTable() {}
 	//void sortTable() {}
 	void insert(string key, const Polynom& value) override {
-
 		Node* newNode = new Node;
 		newNode->key = key;
 		newNode->value = value;
 		newNode->next = nullptr;
-
-		if (size == 0) {
-			head = newNode;
-		}
-		else {
-			Node* current = head;
-			while (current->next != nullptr) {
-				current = current->next;
+		if (check(key) == false) {
+			if (size == 0) {
+				head = newNode;
 			}
-			current->next = newNode;
+			else {
+				Node* current = head;
+				while (current->next != nullptr) {
+					current = current->next;
+				}
+				current->next = newNode;
+			}
+			size++;
 		}
-		size++;
 	}
 
 	Polynom& search(const string& key) override {

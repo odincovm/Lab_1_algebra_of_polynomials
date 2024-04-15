@@ -139,6 +139,7 @@
     <ClCompile Include="test\test_LinArr.cpp" />
     <ClCompile Include="test_ArrTable.cpp" />
     <ClCompile Include="test_Hash.cpp" />
+    <ClCompile Include="test_Hash1.cpp" />
     <ClCompile Include="test_list.cpp" />
     <ClCompile Include="test_Polinom.cpp" />
     <ClCompile Include="test_postfix.cpp" />

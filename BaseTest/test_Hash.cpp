@@ -18,7 +18,15 @@ TEST(HashTable, can_add_and_find)
 	tmp.insert("first", pol);
 	ASSERT_NO_THROW(tmp.search("first"));
 }
-
+TEST(HashTable, cant_be_dublicate)
+{
+	HashTable tmp;
+	Polynom pol;
+	pol.parseAndAddMonoms("2x2y2z2");
+	tmp.insert("first", pol);
+	tmp.insert("first", pol);
+	EXPECT_EQ(1, tmp.getsize());
+}
 
 TEST(HashTable, can_delete)
 {
