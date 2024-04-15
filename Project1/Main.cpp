@@ -156,8 +156,8 @@ void main(void) {
 			listTable.insert(key, temp);
 			hashTable.insert(key, temp);
 			hashTable1.insert(key, temp);
-			avlTree.add(key, temp);
-			linArrTable.add(key, temp);
+			avlTree.insert(key, temp);
+			linArrTable.insert(key, temp);
 			arrTable.insert(key, temp);
 			system("pause");
 			break;
@@ -172,7 +172,7 @@ void main(void) {
 				hashTable.remove(key);
 				arrTable.remove(key);
 				linArrTable.deleteRecord(key);
-				avlTree.deleterecord(key);
+				avlTree.remove(key);
 				hashTable1.remove(key);
 			}
 			catch (exception) {
@@ -201,7 +201,7 @@ void main(void) {
 				break;
 			}
 			case AVL_tree: {
-				search = *avlTree.Find(key);
+				search = *avlTree.search(key);
 				search.printPolynom();
 				break;
 			}
@@ -270,7 +270,7 @@ void main(void) {
 				break;
 			}
 			case AVL_tree: {
-				search = *avlTree.Find(key);
+				search = *avlTree.search(key);
 				search.printPolynom();
 				break;
 			}

@@ -47,7 +47,7 @@ class AVLTree {
 		}
 		return pNode;
 	}
-	TNode* add(record newrecord, TNode* pNode) {
+	TNode* insert(record newrecord, TNode* pNode) {
 		TNode* newNode = new TNode(newrecord);
 		if (pNode == nullptr) {
 			root = newNode;
@@ -58,14 +58,14 @@ class AVLTree {
 				pNode->pLeft = newNode;
 				return balance(pNode);
 			}
-			add(newrecord, pNode->pLeft);
+			insert(newrecord, pNode->pLeft);
 		}
 		if (newrecord.key > pNode->data.key) {
 			if (pNode->pRight == nullptr) {
 				pNode->pRight = newNode;
 				return balance(pNode);
 			}
-			add(newrecord, pNode->pRight);
+			insert(newrecord, pNode->pRight);
 		}
 		return pNode;
 	}
@@ -175,24 +175,24 @@ public:
 		cout << "Table\n";
 		Print(root);
 	}
-	Polynom* Find(string key) {
+	Polynom* search(string key) {
 		TNode* pNode = FindNode(key, root);
 		if (pNode == nullptr)
 			return nullptr;
 		return &pNode->data.pol;
 	}
-	void add(string key, Polynom newpol) {
+	void insert(string key, Polynom newpol) {
 		record newrecord(key, newpol);
 		// Проверка на наличие значения
-		if (Find(newrecord.key) == nullptr) {
+		if (search(newrecord.key) == nullptr) {
 			// Поиск места, куда можно вставить элемент и его вставка
-			add(newrecord, root);
+			insert(newrecord, root);
 			root = balance(root);
 			size++;
 		}
 	}
-	void deleterecord(string key) {
-		if (Find(key) != nullptr) {
+	void remove(string key) {
+		if (search(key) != nullptr) {
 			remove(root, key);
 			size--;
 		}

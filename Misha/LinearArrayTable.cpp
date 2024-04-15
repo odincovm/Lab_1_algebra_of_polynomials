@@ -16,7 +16,7 @@ class LinearArrayTable {
 	vector<record> Table;
 public:
 	size_t getsize() { return size; }
-	void add(string key, Polynom pol) {
+	void insert(string key, Polynom pol) {
 		record newrecord{ key,pol };
 		// Проверка на, то что записи еще нет в таблице
 		for (int i = 0;i < size;i++) {
